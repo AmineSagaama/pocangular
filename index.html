@@ -20,7 +20,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Mock up</a>
+            <a class="navbar-brand" href="index.html">Mock up - Diagnostic data</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -39,7 +39,7 @@
             <form class="form-inline">
                 <label class="mr-sm-2">VIN</label>
                 <input type="text" class="form-control mr-sm-2" ng-model="vin">
-                <button type="submit" class="btn btn-primary" ng-click="callDiagnosticData()">Diagnostic data</button>
+                <button type="submit" class="btn btn-primary btn-warning" ng-click="callDiagnosticData()">Search</button>
             </form>
         </div>
         <!-- /.col-lg-6 -->
@@ -48,7 +48,7 @@
 
     <hr/>
 
-    <div class=" container center_div">
+    <div class="container center_div">
         <form class="form-horizontal">
             <div class="form-group">
                 <label class="control-label col-sm-2 label-center">Request: </label>
@@ -64,83 +64,93 @@
             </div>
         </form>
     </div>
-    <div class="col-md-12">
-        <div class="col-md-6">
+    <br/><br/>
 
-            <div class="panel panel-default">
+    <div class="col-md-14">
+        <div class="col-md-3">
+
+            <div class="panel panel-default panel-success">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Statut</h3>
+                    <h3 class="panel-title">Fuel Tank</h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="control-label col-sm-2 label-center">Mileage: </label>
+                            <label class="control-label col-sm-2 label-center">Unit: </label>
                             <div class="col-sm-10">
-                                <input type="datetime" ng-model="mileage" class="form-control">
+                                <input type="datetime" ng-model="unitTank" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2">Oil: </label>
+                            <label class="control-label col-sm-2">Value: </label>
                             <div class="col-sm-10">
-                                <input type="datetime" ng-model="oil" class="form-control">
+                                <input type="datetime" ng-model="valueTank" class="form-control">
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default panel-success">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Tire</h3>
+                    <h3 class="panel-title">Life Time Fuel Econ</h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="control-label col-sm-2 label-center">FR: </label>
-                            <div class="col-sm-3">
-                                <input type="datetime" ng-model="fr" class="form-control">
-                            </div>
-                            <label class="control-label col-sm-2 label-center">FL: </label>
-                            <div class="col-sm-3">
-                                <input type="datetime" ng-model="fl" class="form-control">
+                            <label class="control-label col-sm-2 label-center">Unit: </label>
+                            <div class="col-sm-10">
+                                <input type="datetime" ng-model="unitLevel" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2">RL: </label>
-                            <div class="col-sm-3">
-                                <input type="datetime" ng-model="rl" class="form-control">
-                            </div>
-                            <label class="control-label col-sm-2">RR: </label>
-                            <div class="col-sm-3">
-                                <input type="datetime" ng-model="rr" class="form-control">
+                            <label class="control-label col-sm-2">Value: </label>
+                            <div class="col-sm-10">
+                                <input type="datetime" ng-model="valueLevel" class="form-control">
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="panel panel-default">
+        <div class="col-md-3">
+            <div class="panel panel-default panel-success">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Fuel</h3>
+                    <h3 class="panel-title">Fuel Level</h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="control-label col-sm-2 label-center">Tank: </label>
+                            <label class="control-label col-sm-2 label-center">Unit: </label>
                             <div class="col-sm-10">
-                                <input type="datetime" ng-model="tank" class="form-control">
+                                <input type="datetime" ng-model="unitLifeTimeFuelEcon" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2">%: </label>
+                            <label class="control-label col-sm-2">Value: </label>
                             <div class="col-sm-10">
-                                <input type="datetime" ng-model="pourcentage" class="form-control">
+                                <input type="datetime" ng-model="valueLifeTimeFuelEcon" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="panel panel-default panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Odometer</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 label-center">Unit: </label>
+                            <div class="col-sm-10">
+                                <input type="datetime" ng-model="unitOdometer" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2">Avg: </label>
+                            <label class="control-label col-sm-2">Value: </label>
                             <div class="col-sm-10">
-                                <input type="datetime" ng-model="avg" class="form-control">
+                                <input type="datetime" ng-model="valueOdometer" class="form-control">
                             </div>
                         </div>
                     </form>
@@ -149,6 +159,80 @@
         </div>
 
     </div>
+
+    <div class="col-md-3">
+        <div class="panel panel-default panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Oil</h3>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2 label-center">Unit: </label>
+                        <div class="col-sm-10">
+                            <input type="datetime" ng-model="unitOil" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Value: </label>
+                        <div class="col-sm-10">
+                            <input type="datetime" ng-model="valueOil" class="form-control">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panel panel-default panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Placard Front</h3>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2 label-center">Unit: </label>
+                        <div class="col-sm-10">
+                            <input type="datetime" ng-model="unitPlacardFront" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Value: </label>
+                        <div class="col-sm-10">
+                            <input type="datetime" ng-model="valuePlacardFront" class="form-control">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="panel panel-default panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Placard Rear</h3>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2 label-center">Unit: </label>
+                        <div class="col-sm-10">
+                            <input type="datetime" ng-model="unitPlacardRear" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Value: </label>
+                        <div class="col-sm-10">
+                            <input type="datetime" ng-model="valuePlacardRear" class="form-control">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</div>
 
 
 </div>
