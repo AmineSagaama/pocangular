@@ -5,12 +5,14 @@ var express = require('express'),
     eps = require('ejs'),
     morgan = require('morgan');
 
+var path = require('path')
+
 Object.assign = require('object-assign')
 
 app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
 
-app.use(express.static(__dirname + "/../public"));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 
