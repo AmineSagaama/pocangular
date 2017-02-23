@@ -13,7 +13,7 @@
     <script src="js/mock-up.module.js"></script>
 </head>
 <body ng-controller="mock-up-controller">
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-default" style="height:60px;">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -23,22 +23,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Mock up - Diagnostic data</a>
+            <img alt="Europcar Logo" src="images/europcar.png" style="width:130px;height:55px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="navbar-span" href="index.html">Mock up - Diagnostic data</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="index.html">Diagnostic data</a></li>
-                <li><a href="command.html">Command</a></li>
+                <li class="active"><a style="height:60px;" href="index.html">Diagnostic data</a></li>
+                <li ><a class="nav-span" style="color:#fff;" href="command.html">Command</a></li>
             </ul>
         </div>
 
     </div>
 </nav>
 <div class="container-fluid">
-    <div class="row margin-top-20">
+    <div class="row margin-top-15">
+        <img alt="Europcar Logo" src="images/onstar.jpg" style="width:170px;height:100px;">
         <div class="text-center">
-
-
             <form class="form-inline">
                 <label class="mr-sm-2">VIN</label>
                 <input type="text" required class="form-control mr-sm-4" ng-model="vin">
