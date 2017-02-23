@@ -1,8 +1,7 @@
 var mockUpModule = angular.module('mock-up',[]);
 
 
-
-angular.module('mock-up').
+angular.module('mock-up', ['ngLoadingSpinner']).
 controller('mock-up-controller', function($scope,$http) {
 
        $scope.callDiagnosticData= function () {

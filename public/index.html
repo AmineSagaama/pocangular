@@ -11,6 +11,9 @@
     -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="js/mock-up.module.js"></script>
+    <script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
+    <script type="text/javascript" src="js/angular-spinner.min.js"></script>
+    <script type="text/javascript" src="js/angular-loading-spinner.js"></script>
 </head>
 <body ng-controller="mock-up-controller">
 <nav class="navbar navbar-default navbar-fixed-top navbar-default" style="height:60px;">
@@ -42,6 +45,7 @@
             <form class="form-inline">
                 <label class="mr-sm-2">VIN</label>
                 <input type="text" required class="form-control mr-sm-4" ng-model="vin">
+                <span us-spinner="{radius:30, width:8, length: 16}"></span>
                 <button type="submit" class="btn btn-primary btn-warning" ng-click="callDiagnosticData()">Search</button>
             </form>
         </div>
