@@ -11,7 +11,6 @@ app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
 
 app.use(express.static(__dirname + "/public"));
-app.use(app.router);
 
 
 
