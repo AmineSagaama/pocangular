@@ -106,4 +106,4 @@ console.log('Server running on http://%s:%s', ip, port);
 
 module.exports = app ;
 
-app.use('/resources', express.static(__dirname + '/public'));
+app.use('resources', express.static(__dirname + '/public'));
