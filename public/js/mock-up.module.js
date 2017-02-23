@@ -39,6 +39,7 @@ controller('mock-up-controller', function($scope,$http) {
                $scope.valuePlacardFront=response.data.placardFront.value;
                $scope.unitPlacardRear=response.data.placardRear.unit;
                $scope.valuePlacardRear=response.data.placardRear.value;
+               $scope.valueSeatBelt=response.data.seatBelt.status;
 
            })
        }
