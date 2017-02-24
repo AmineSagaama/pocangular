@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mock-up">
+<head>
+    <meta charset="UTF-8">
+    <title>Mock up</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mock-up.css" rel="stylesheet">
+    <link rel="icon" href="images/icon.ico">
+    <!--
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/mock-up.module.js"></script>
+    <script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
+    <script type="text/javascript" src="js/angular-spinner.min.js"></script>
+    <script type="text/javascript" src="js/angular-loading-spinner.js"></script>
+</head>
+<body ng-controller="mock-up-controller">
+<nav class="navbar navbar-default navbar-fixed-top navbar-default" style="height:60px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img alt="Europcar Logo" src="images/europcar.png" style="width:130px;height:55px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="navbar-span" href="index.html">Mock up - Command</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a style="color:#fff;" href="index.html">Diagnostic data</a></li>
+                <li class="active"><a style="height:60px;" href="command.html">Command</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row margin-top-15">
+        <img alt="Europcar Logo" src="images/onstar.jpg" style="width:170px;height:100px;">
+        <div class="text-center">
+            <form class="form-inline">
+                <label class="mr-sm-2">VIN</label>
+                <input type="text" required class="form-control mr-sm-4" ng-model="vin">
+                <span us-spinner="{radius:30, width:8, length: 16}"></span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" style="width:70px;" class="btn btn-primary btn-success" ng-click="callDiagnosticData()">Lock</button>
+                <br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit"  class="btn btn-primary btn-warning" ng-click="callDiagnosticData()">Unlock
+                </button>
+                <br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" style="width:70px;"  class="btn btn-primary btn-danger" ng-click="callDiagnosticData()">Alert
+                </button>
+            </form>
+        </div>
+        <!-- /.col-lg-6 -->
+    </div>
+    <!-- /.row -->
+
+    <hr/>
+
+    <div class="container center_div">
+        <form class="form-horizontal">
+            <div class="form-group col-sm-5">
+                <label class="control-label col-sm-2 label-center">Request: </label>
+                <div class="col-sm-10">
+                    <input type="datetime" ng-model="request" class="form-control" disabled>
+                </div>
+            </div>
+            <div class="form-group col-sm-5">
+                <label class="control-label col-sm-2">Response: </label>
+                <div class="col-sm-10">
+                    <input type="datetime" ng-model="response" class="form-control" disabled>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br/><br/>
+
+
+</div>
+
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../resources/js/bootstrap.min.js"></script>
+</body>
+</html>
