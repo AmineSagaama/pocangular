@@ -13,6 +13,7 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             },
             data: {id: "file"}
         }
+        $scope.setupDiagnosticData();
         $http(request).then(function (response) {
             $scope.request = response.data.requestTime;
             $scope.response = response.data.responseTime;
@@ -42,6 +43,33 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
         })
     }
 
+    $scope.setupDiagnosticData = function () {
+        $scope.request = "";
+        $scope.response = "";
+        $scope.oil = "";
+        $scope.tank = "";
+        $scope.pourcentage = "";
+        $scope.rl = "";
+        $scope.rr = "";
+        $scope.fr = "";
+        $scope.fl = "";
+        $scope.unitTank = "";
+        $scope.valueTank = "";
+        $scope.unitLevel = "";
+        $scope.valueLevel = "";
+        $scope.unitLifeTimeFuelEcon = "";
+        $scope.valueLifeTimeFuelEcon = "";
+        $scope.unitOdometer = "";
+        $scope.valueOdometer = "";
+        $scope.unitOil = "";
+        $scope.valueOil = "";
+        $scope.unitPlacardFront = "";
+        $scope.valuePlacardFront = "";
+        $scope.unitPlacardRear = "";
+        $scope.valuePlacardRear = "";
+        $scope.valueSeatBelt = "";
+    }
+
     $scope.callAlertCommand = function () {
         var request = {
             method: 'POST',
@@ -52,6 +80,7 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             },
             data: {id: "file"}
         }
+        $scope.setupAlertCommand();
         $http(request).then(function (response) {
             $scope.request = response.data.commandResponse.requestTime;
             $scope.response = response.data.commandResponse.completionTime;
@@ -59,6 +88,13 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             $scope.typeAlert = response.data.commandResponse.type;
 
         })
+    }
+
+    $scope.setupAlertCommand = function () {
+        $scope.request = "";
+        $scope.response = "";
+        $scope.statusAlert = "";
+        $scope.typeAlert = "";
     }
 
     $scope.callUnlockDoorsCommand = function () {
@@ -71,6 +107,7 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             },
             data: {id: "file"}
         }
+        $scope.setupUnlockDoors();
         $http(request).then(function (response) {
             $scope.request = response.data.commandResponse.requestTime;
             $scope.response = response.data.commandResponse.completionTime;
@@ -78,6 +115,13 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             $scope.typeUnlockDoors = response.data.commandResponse.type;
 
         })
+    }
+
+    $scope.setupUnlockDoors = function () {
+        $scope.request = "";
+        $scope.response = "";
+        $scope.statusUnlockDoors = "";
+        $scope.typeUnlockDoors = "";
     }
 
     $scope.callLockDoorsCommand = function () {
@@ -90,6 +134,7 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             },
             data: {id: "file"}
         }
+        $scope.setupLockDoors();
         $http(request).then(function (response) {
             $scope.request = response.data.commandResponse.requestTime;
             $scope.response = response.data.commandResponse.completionTime;
@@ -97,6 +142,13 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             $scope.typeLockDoors = response.data.commandResponse.type;
 
         })
+    }
+
+    $scope.setupLockDoors = function () {
+        $scope.request = "";
+        $scope.response = "";
+        $scope.statusLockDoors = "";
+        $scope.typeLockDoors = "";
     }
 
 });
