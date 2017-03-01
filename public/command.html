@@ -6,9 +6,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/mock-up.css" rel="stylesheet">
     <link rel="icon" href="images/icon.ico">
-    <!--
-     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
-    -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="js/mock-up.module.js"></script>
     <script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
@@ -47,14 +44,17 @@
                 <input type="text" required class="form-control mr-sm-4" ng-model="vin">
                 <span us-spinner="{radius:30, width:8, length: 16}"></span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="submit" style="width:70px;" class="btn btn-primary btn-success" ng-click="callLockDoorsCommand()">Lock</button>
-                <br/><br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="submit"  class="btn btn-primary btn-warning" ng-click="callUnlockDoorsCommand()">Unlock
+                <button type="submit" style="width:70px;" class="btn btn-primary btn-success"
+                        ng-click="callLockDoorsCommand()">Lock
                 </button>
                 <br/><br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="submit" style="width:70px;"  class="btn btn-primary btn-danger" ng-click="callAlertCommand()">Alert
+                <button type="submit" class="btn btn-primary btn-warning" ng-click="callUnlockDoorsCommand()">Unlock
+                </button>
+                <br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" style="width:70px;" class="btn btn-primary btn-danger"
+                        ng-click="callAlertCommand()">Alert
                 </button>
             </form>
         </div>
@@ -80,8 +80,20 @@
             </div>
         </form>
     </div>
-    <br/><br/>
+    <br/><br/><br/>
 
+
+</div>
+<div style="text-align: center;">
+    <div ng-if="sucess">
+        <h2 style="color: #5cb85c;">Successful !</h2>
+        <img src="images/ok.png" alt="ok" class="img-check">
+    </div>
+
+    <div ng-if="failure">
+        <h2 style="color: #d9534f;">Failure !</h2>
+        <img src="images/error.png" alt="failure" class="img-check">
+    </div>
 
 </div>
 

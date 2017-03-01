@@ -3,6 +3,7 @@ var mockUpModule = angular.module('mock-up', []);
 
 angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller', function ($scope, $http) {
 
+
     $scope.callDiagnosticData = function () {
         var request = {
             method: 'POST',
@@ -44,6 +45,8 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
     }
 
     $scope.setupDiagnosticData = function () {
+        $scope.failure = false;
+        $scope.sucess = false;
         $scope.request = "";
         $scope.response = "";
         $scope.oil = "";
@@ -86,16 +89,21 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             $scope.response = response.data.commandResponse.completionTime;
             $scope.statusAlert = response.data.commandResponse.status;
             $scope.typeAlert = response.data.commandResponse.type;
-
+            $scope.sucess = true;
+        }, function () {
+            $scope.failure = true;
         })
     }
 
     $scope.setupAlertCommand = function () {
+        $scope.failure = false;
+        $scope.sucess = false;
         $scope.request = "";
         $scope.response = "";
         $scope.statusAlert = "";
         $scope.typeAlert = "";
     }
+
 
     $scope.callUnlockDoorsCommand = function () {
         var request = {
@@ -113,11 +121,16 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             $scope.response = response.data.commandResponse.completionTime;
             $scope.statusUnlockDoors = response.data.commandResponse.status;
             $scope.typeUnlockDoors = response.data.commandResponse.type;
+            $scope.sucess = true;
 
+        }, function () {
+            $scope.failure = true;
         })
     }
 
     $scope.setupUnlockDoors = function () {
+        $scope.failure = false;
+        $scope.sucess = false;
         $scope.request = "";
         $scope.response = "";
         $scope.statusUnlockDoors = "";
@@ -140,11 +153,15 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             $scope.response = response.data.commandResponse.completionTime;
             $scope.statusLockDoors = response.data.commandResponse.status;
             $scope.typeLockDoors = response.data.commandResponse.type;
-
+            $scope.sucess = true;
+        }, function () {
+            $scope.failure = true;
         })
     }
 
     $scope.setupLockDoors = function () {
+        $scope.failure = false;
+        $scope.sucess = false;
         $scope.request = "";
         $scope.response = "";
         $scope.statusLockDoors = "";
