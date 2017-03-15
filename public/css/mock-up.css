@@ -165,4 +165,27 @@ input[type="text"] {
     width: 80px;
     left: 150px;
 }
+.col-sm4-mock{
+    width:33.33%;
+    float: left;
+}
+.padding-mock{
+    padding-left:5px;
+    padding-right:5px;
+}
+.col-sm12-mock {
+    margin-bottom: 20px;
+    float: left;
+}
 
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+
+.picto{
+    background-image: url(../images/tire.jpeg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding: 2px 0 2px 23px;
+}
