@@ -81,7 +81,7 @@
 
         <div class="panel panel-default panel-success">
             <div class="panel-heading">
-                <h3 class="panel-title">Fuel</h3>
+                <h3 class="panel-title picto-fuel">Fuel</h3>
             </div>
             <div class="panel-body">
                 <form class="form-horizontal">
@@ -90,28 +90,28 @@
                             <label class="control-label col-sm-2 label-center">Tank: </label>
                         </div>
                         <div class="col-sm-5">
-                            <input type="datetime" ng-model="unitTank" class="form-control">
+                            <input type="datetime" ng-model="valueTank" class="form-control" placeholder="Value">
                         </div>
                         <div class="col-sm-5">
-                            <input type="datetime" ng-model="unitTank" class="form-control">
+                            <input type="datetime" ng-model="unitTank" class="form-control" placeholder="Unit">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2  label-center">Level: </label>
                         <div class="col-sm-5">
-                            <input type="datetime" ng-model="valueTank" class="form-control">
+                            <input type="datetime" ng-model="valueLevel" class="form-control" placeholder="Value">
                         </div>
                         <div class="col-sm-5">
-                            <input type="datetime" ng-model="valueTank" class="form-control">
+                            <input type="datetime" ng-model="unitLevel" class="form-control" placeholder="Unit">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2  label-center">Econ: </label>
                         <div class="col-sm-5">
-                            <input type="datetime" ng-model="valueTank" class="form-control">
+                            <input type="datetime" ng-model="valueLifeTimeFuelEcon" class="form-control" placeholder="Value">
                         </div>
                         <div class="col-sm-5">
-                            <input type="datetime" ng-model="valueTank" class="form-control">
+                            <input type="datetime" ng-model="unitLifeTimeFuelEcon" class="form-control" placeholder="Unit">
                         </div>
                     </div>
                 </form>
@@ -123,7 +123,7 @@
     <div class="col-md-5">
         <div class="panel panel-default panel-success" style="height: 217px;">
             <div class="panel-heading">
-                <h3 class="panel-title">Usage</h3>
+                <h3 class="panel-title picto-odometer">Usage</h3>
             </div>
             <div class="panel-body">
                 <form class="form-horizontal">
@@ -131,19 +131,19 @@
                     <div class="form-group">
                         <label class="control-label col-sm-3 label-center">Odometer: </label>
                         <div class="col-sm-4">
-                            <input type="datetime" ng-model="unitTank" class="form-control">
+                            <input type="datetime" ng-model="valueOdometer" class="form-control" placeholder="Value">
                         </div>
                         <div class="col-sm-4">
-                            <input type="datetime" ng-model="unitTank" class="form-control">
+                            <input type="datetime" ng-model="unitOdometer" class="form-control" placeholder="Unit">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3 label-center">Oil: </label>
                         <div class="col-sm-4">
-                            <input type="datetime" ng-model="valueTank" class="form-control">
+                            <input type="datetime" ng-model="valueOil" class="form-control" placeholder="Value">
                         </div>
                         <div class="col-sm-4">
-                            <input type="datetime" ng-model="valueTank" class="form-control">
+                            <input type="datetime" ng-model="unitOil" class="form-control" placeholder="Unit">
                         </div>
                     </div>
                 </form>
@@ -162,25 +162,25 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
                         <div class="panel panel-default panel-success margin-bottom-0">
-                            <div class="panel-heading">Placard Front:</div>
+                            <div class="panel-heading">Placard :</div>
                             <div class="panel-body">
                                 <form class="form-horizontal">
                                     <div class="form-group col-sm12-mock">
                                         <label class="control-label label-center col-sm4-mock  ">Placard Front: </label>
                                         <div class="col-sm4-mock padding-mock">
-                                            <input type="datetime" ng-model="unitTank" class="form-control">
+                                            <input type="datetime" ng-model="valuePlacardFront" class="form-control" placeholder="Value">
                                         </div>
                                         <div class="col-sm4-mock padding-mock">
-                                            <input type="datetime" ng-model="unitTank" class="form-control">
+                                            <input type="datetime" ng-model="unitPlacardFront" class="form-control" placeholder="Unit">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label abel-center col-sm4-mock ">Placard Rear: </label>
                                         <div class="col-sm4-mock padding-mock">
-                                            <input type="datetime" ng-model="valueTank" class="form-control">
+                                            <input type="datetime" ng-model="valuePlacardRear" class="form-control" placeholder="Value">
                                         </div>
                                         <div class="col-sm4-mock padding-mock">
-                                            <input type="datetime" ng-model="valueTank" class="form-control">
+                                            <input type="datetime" ng-model="unitPlacardRear" class="form-control" placeholder="Unit">
                                         </div>
                                     </div>
                                 </form>
@@ -195,62 +195,63 @@
                                 <div class="col-sm4-mock">
                                     <div class="col-sm12-mock">
                                         <div class="col-sm4-mock  padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
-                                        <input type="datetime" ng-model="unitTank" class="form-control">
+                                            <label class="control-label abel-center" >U: </label>
+                                            <input type="datetime" ng-model="unitTank" class="form-control" >
                                         </div>
                                         <div class="col-sm4-mock  padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
-                                        <input type="datetime" ng-model="unitTank" class="form-control">
+                                            <label class="control-label abel-center">V: </label>
+                                            <input type="datetime" ng-model="unitTank" class="form-control" >
                                         </div>
                                         <div class="col-sm4-mock  padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
-                                        <input type="datetime" ng-model="unitTank" class="form-control">
+                                            <label class="control-label abel-center">S: </label>
+                                            <input type="datetime" ng-model="unitTank" class="form-control" >
                                         </div>
                                     </div>
                                     <div>
                                         <div class="col-sm4-mock padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
-                                        <input type="datetime" ng-model="unitTank" class="form-control">
+                                            <label class="control-label abel-center">U: </label>
+                                            <input type="datetime" ng-model="unitTank" class="form-control">
                                         </div>
                                         <div class="col-sm4-mock padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
-                                        <input type="datetime" ng-model="unitTank" class="form-control">
+                                            <label class="control-label abel-center">V: </label>
+                                            <input type="datetime" ng-model="unitTank" class="form-control">
                                         </div>
                                         <div class="col-sm4-mock padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
-                                        <input type="datetime" ng-model="unitTank" class="form-control">
+                                            <label class="control-label abel-center">S: </label>
+                                            <input type="datetime" ng-model="unitTank" class="form-control">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    <img src="images/vehicle.png" alt="" style="width: 150px; height: 145px;" class="img-responsive center-block" />
+                                    <img src="images/vehicle.png" alt="" style="width: 150px; height: 145px;"
+                                         class="img-responsive center-block"/>
                                 </div>
                                 <div class="col-sm4-mock">
                                     <div class="col-sm12-mock">
                                         <div class="col-sm4-mock  padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
+                                            <label class="control-label abel-center">U: </label>
                                             <input type="datetime" ng-model="unitTank" class="form-control">
                                         </div>
                                         <div class="col-sm4-mock  padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
+                                            <label class="control-label abel-center">V: </label>
                                             <input type="datetime" ng-model="unitTank" class="form-control">
                                         </div>
                                         <div class="col-sm4-mock  padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
+                                            <label class="control-label abel-center">S: </label>
                                             <input type="datetime" ng-model="unitTank" class="form-control">
                                         </div>
                                     </div>
                                     <div>
                                         <div class="col-sm4-mock padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
+                                            <label class="control-label abel-center">U: </label>
                                             <input type="datetime" ng-model="unitTank" class="form-control">
                                         </div>
                                         <div class="col-sm4-mock padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
+                                            <label class="control-label abel-center">V: </label>
                                             <input type="datetime" ng-model="unitTank" class="form-control">
                                         </div>
                                         <div class="col-sm4-mock padding-mock">
-                                            <label class="control-label abel-center">Pl: </label>
+                                            <label class="control-label abel-center">S: </label>
                                             <input type="datetime" ng-model="unitTank" class="form-control">
                                         </div>
                                     </div>

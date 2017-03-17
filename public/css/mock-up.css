@@ -189,3 +189,24 @@ input[type="text"] {
     background-repeat: no-repeat;
     padding: 2px 0 2px 23px;
 }
+
+.picto-fuel{
+    background-image: url(../images/fuel.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding: 2px 0 2px 23px;
+}
+
+.picto-odometer{
+    background-image: url(../images/odometer.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding: 2px 0 2px 23px;
+}
+
+.picto-tank{
+    background-image: url(../images/tank.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding: 2px 0 2px 23px;
+}
