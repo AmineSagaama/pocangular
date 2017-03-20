@@ -39,10 +39,18 @@ angular.module('mock-up', ['ngLoadingSpinner']).controller('mock-up-controller',
             $scope.valuePlacardFront = response.data.placardFront.value;
             $scope.unitPlacardRear = response.data.placardRear.unit;
             $scope.valuePlacardRear = response.data.placardRear.value;
-            $scope.valueSeatBelt = response.data.seatBelt.status;
             $scope.unitFrontLeft = response.data.tiresPressure.frontLeft.unit;
             $scope.valueFrontLeft = response.data.tiresPressure.frontLeft.value;
             $scope.statusFrontLeft = response.data.tiresPressure.frontLeft.status;
+            $scope.unitRearLeft = response.data.tiresPressure.rearLeft.unit;
+            $scope.valueRearLeft = response.data.tiresPressure.rearLeft.value;
+            $scope.statusRearLeft = response.data.tiresPressure.rearLeft.status;
+            $scope.unitFrontRight = response.data.tiresPressure.frontRight.unit;
+            $scope.valueFrontRight = response.data.tiresPressure.frontRight.value;
+            $scope.statusFrontRight = response.data.tiresPressure.frontRight.status;
+            $scope.unitRearRight = response.data.tiresPressure.rearRight.unit;
+            $scope.valueRearRight = response.data.tiresPressure.rearRight.value;
+            $scope.statusRearRight = response.data.tiresPressure.rearRight.status;
 
         })
     }
